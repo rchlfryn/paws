@@ -6,6 +6,10 @@
 .hero {
 	position: relative;
 	width: 100%;
+	#hero-background {
+		min-height: 70vh;
+
+	}
 }
 .hero-cta {
 	position: absolute;
@@ -17,7 +21,18 @@
 
 .box {
 	background: grey;
-	width: 24.5%;
+	width: 29%;
 	height: 200px;
 	display: inline-block;
+}
+.testimonial {
+	display: inline-block;
+	width: 58%
+}
+.calendar {
+	float: right;
+	width: 40%;
+}
+.main-text-area {
+	clear: both;
 }

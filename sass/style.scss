@@ -1,5 +1,5 @@
 /*!
-Theme Name: wp_blank
+Theme Name: paws
 Theme URI: http://rachelfryan.com/
 Author: Underscores.me
 Author URI: http://rachelfryan.com/
@@ -7,7 +7,7 @@ Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: blank
+Text Domain: paws
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -71,6 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+@import "elements/calendar";
 @import "elements/header";
 @import "elements/sidebar";
 

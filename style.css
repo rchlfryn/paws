@@ -1,5 +1,5 @@
 /*!
-Theme Name: wp_blank
+Theme Name: paws
 Theme URI: http://rachelfryan.com/
 Author: Underscores.me
 Author URI: http://rachelfryan.com/
@@ -7,7 +7,7 @@ Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: blank
+Text Domain: paws
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -635,8 +635,12 @@ big {
   position: relative;
   width: 100%;
 }
+/* line 9, sass/layout/_base.scss */
+.hero #hero-background {
+  min-height: 70vh;
+}
 
-/* line 10, sass/layout/_base.scss */
+/* line 14, sass/layout/_base.scss */
 .hero-cta {
   position: absolute;
   top: 0;
@@ -648,12 +652,29 @@ big {
   height: 50px;
 }
 
-/* line 18, sass/layout/_base.scss */
+/* line 22, sass/layout/_base.scss */
 .box {
   background: grey;
-  width: 24.5%;
+  width: 29%;
   height: 200px;
   display: inline-block;
+}
+
+/* line 28, sass/layout/_base.scss */
+.testimonial {
+  display: inline-block;
+  width: 58%;
+}
+
+/* line 32, sass/layout/_base.scss */
+.calendar {
+  float: right;
+  width: 40%;
+}
+
+/* line 36, sass/layout/_base.scss */
+.main-text-area {
+  clear: both;
 }
 
 /* line 1, sass/layout/_staff.scss */
@@ -678,6 +699,11 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+/* line 2, sass/elements/_calendar.scss */
+.simcal-day-label > span {
+  background-color: #ccc !important;
+}
+
 /* line 1, sass/elements/_header.scss */
 .site-header {
   max-width: 1080px;
@@ -768,7 +794,7 @@ a:hover, a:active {
 @media (min-width: 50em) {
   /* line 1, sass/navigation/_menus.scss */
   .main-navigation {
-    margin: 90px 0;
+    margin: 50px 0;
   }
 }
 /* line 10, sass/navigation/_menus.scss */
