@@ -16,6 +16,7 @@
 
 .site-content .widget-area {
 	width: 100%;
+	background-color: rgba(255,255,255,0.5);
 	@include breakpoint ('tablet'){
 		float: right;
 		overflow: hidden;

@@ -43,6 +43,7 @@
 
 			a:hover,
 			a.focus {
+
 			}
 		}
 
@@ -55,20 +56,27 @@
 	li {
 		position: relative;
 		padding: 10px 30px;
-		background: grey;
-		border-right: 1px solid blue;
+		border-right: 3px solid white;
+		cursor: pointer;
+
+		&:last-child {
+			border-right: 0;
+		}
 		@include breakpoint ('tablet') {
 			float: left;
 		}
 
 		&:hover > a,
 		&.focus > a {
+			cursor: pointer;
+			text-decoration: underline;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		color: white;
 	}
 
 	.current_page_item > a,

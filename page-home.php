@@ -23,7 +23,7 @@ $testimonial = get_field('testimonial');
 <div class="hero">
 
 	<div id="hero-background" style="background: url(<?php echo $hero_background['url']; ?>); background-size: cover;">
-		<button class="hero-cta">Call to actisson</button>
+		<button class="btn hero-cta outline-btn">Start training</button>
 	</div>
 </div>
 	<div class="content-container">
@@ -38,10 +38,10 @@ $testimonial = get_field('testimonial');
 					</div>
 					<div class="calendar"><?php the_field('calendar_link'); ?></div>
 					<div class="box" style="background: url(<?php echo $about_photo['url']; ?>); background-size: cover;">
-						<button onclick="location.href='/training'" class="overlay-button">Training</button>
+						<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
 					</div>
 					<div class="box" style="background: url(<?php echo $id_camp_photo['url']; ?>); background-size: cover;">
-						<button onclick="location.href='/training'" class="overlay-button">Training</button>
+						<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
 					</div>
 
 

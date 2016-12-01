@@ -372,18 +372,19 @@ html {
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
+  background: url("../paws/images/paws_bg.png");
 }
 
-/* line 15, sass/default/_elements.scss */
+/* line 16, sass/default/_elements.scss */
 blockquote, q {
   quotes: "" "";
 }
-/* line 18, sass/default/_elements.scss */
+/* line 19, sass/default/_elements.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 24, sass/default/_elements.scss */
+/* line 25, sass/default/_elements.scss */
 hr {
   background-color: #ccc;
   border: 0;
@@ -391,39 +392,39 @@ hr {
   margin-bottom: 1.5em;
 }
 
-/* line 31, sass/default/_elements.scss */
+/* line 32, sass/default/_elements.scss */
 ul, ol {
   margin: 0 0 1.5em 3em;
 }
 
-/* line 35, sass/default/_elements.scss */
+/* line 36, sass/default/_elements.scss */
 ul {
   list-style: disc;
 }
 
-/* line 39, sass/default/_elements.scss */
+/* line 40, sass/default/_elements.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 43, sass/default/_elements.scss */
+/* line 44, sass/default/_elements.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 49, sass/default/_elements.scss */
+/* line 50, sass/default/_elements.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 53, sass/default/_elements.scss */
+/* line 54, sass/default/_elements.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-/* line 57, sass/default/_elements.scss */
+/* line 58, sass/default/_elements.scss */
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -431,16 +432,62 @@ img {
   /* Adhere to container width. */
 }
 
-/* line 62, sass/default/_elements.scss */
+/* line 63, sass/default/_elements.scss */
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-/* line 66, sass/default/_elements.scss */
+/* line 67, sass/default/_elements.scss */
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+/* General button style (reset) */
+/* line 73, sass/default/_elements.scss */
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 93, sass/default/_elements.scss */
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Button 1 */
+/* line 103, sass/default/_elements.scss */
+.outline-btn {
+  border: 3px solid #fff;
+  color: #fff;
+  /* Button 1a */
+}
+/* line 108, sass/default/_elements.scss */
+.outline-btn:hover, .outline-btn:active {
+  cursor: pointer;
+  color: #003263;
+  background: #fff;
 }
 
 /* line 1, sass/default/_forms.scss */
@@ -495,8 +542,7 @@ textarea {
   width: 100%;
 }
 
-/* line 35, sass/default/_forms.scss */
-button,
+/* line 36, sass/default/_forms.scss */
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -513,7 +559,6 @@ input[type="submit"] {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 /* line 50, sass/default/_forms.scss */
-button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -521,9 +566,7 @@ input[type="submit"]:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 /* line 55, sass/default/_forms.scss */
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
+input[type="button"]:active, input[type="button"]:focus,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
@@ -648,8 +691,8 @@ big {
   right: 0;
   left: 0;
   margin: auto;
-  width: 200px;
-  height: 50px;
+  height: 100px;
+  width: 370px;
 }
 
 /* line 22, sass/layout/_base.scss */
@@ -658,23 +701,40 @@ big {
   width: 29%;
   height: 200px;
   display: inline-block;
+  position: relative;
 }
 
-/* line 28, sass/layout/_base.scss */
+/* line 29, sass/layout/_base.scss */
 .testimonial {
   display: inline-block;
   width: 58%;
 }
 
-/* line 32, sass/layout/_base.scss */
+/* line 33, sass/layout/_base.scss */
 .calendar {
   float: right;
   width: 40%;
 }
 
-/* line 36, sass/layout/_base.scss */
+/* line 37, sass/layout/_base.scss */
 .main-text-area {
   clear: both;
+}
+
+/* line 41, sass/layout/_base.scss */
+.main-content,
+.site-main {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 45, sass/layout/_base.scss */
+.content-container {
+  padding-top: 150px;
+}
+
+/* line 49, sass/layout/_base.scss */
+.site-main {
+  padding: 10px 20px;
 }
 
 /* line 1, sass/layout/_staff.scss */
@@ -706,14 +766,44 @@ big {
 
 /* line 1, sass/elements/_header.scss */
 .site-header {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #003263;
+}
+
+/* line 10, sass/elements/_header.scss */
+.header-container {
   max-width: 1080px;
   margin: 0 auto;
 }
 
-/* line 5, sass/elements/_header.scss */
+/* line 15, sass/elements/_header.scss */
 .logo {
   width: 20%;
   float: left;
+}
+
+/* line 1, sass/elements/_footer.scss */
+.pre-footer {
+  background-image: url("../paws/images/grass.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 120px;
+  top: -60px;
+  position: absolute;
+}
+
+/* line 11, sass/elements/_footer.scss */
+.footer {
+  background-color: #333333;
+  min-height: 200px;
+  position: relative;
+  margin-top: 100px;
+  padding-top: 50px;
 }
 
 /* line 2, sass/elements/_sidebar.scss */
@@ -739,6 +829,7 @@ big {
 /* line 17, sass/elements/_sidebar.scss */
 .site-content .widget-area {
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 50em) {
   /* line 17, sass/elements/_sidebar.scss */
@@ -749,7 +840,7 @@ big {
   }
 }
 
-/* line 26, sass/elements/_sidebar.scss */
+/* line 27, sass/elements/_sidebar.scss */
 .site-footer {
   clear: both;
   width: 100%;
@@ -826,74 +917,84 @@ a:hover, a:active {
 .main-navigation ul ul a {
   width: 200px;
 }
-/* line 49, sass/navigation/_menus.scss */
+/* line 50, sass/navigation/_menus.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
-/* line 55, sass/navigation/_menus.scss */
+/* line 56, sass/navigation/_menus.scss */
 .main-navigation li {
   position: relative;
   padding: 10px 30px;
-  background: grey;
-  border-right: 1px solid blue;
+  border-right: 3px solid white;
+  cursor: pointer;
+}
+/* line 62, sass/navigation/_menus.scss */
+.main-navigation li:last-child {
+  border-right: 0;
 }
 @media (min-width: 50em) {
-  /* line 55, sass/navigation/_menus.scss */
+  /* line 56, sass/navigation/_menus.scss */
   .main-navigation li {
     float: left;
   }
 }
 /* line 69, sass/navigation/_menus.scss */
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 76, sass/navigation/_menus.scss */
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: white;
 }
 
 /* Small menu. */
-/* line 82, sass/navigation/_menus.scss */
+/* line 90, sass/navigation/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
-/* line 87, sass/navigation/_menus.scss */
+/* line 95, sass/navigation/_menus.scss */
 .menu-toggle {
   position: absolute;
   right: 0;
 }
 
-/* line 91, sass/navigation/_menus.scss */
+/* line 99, sass/navigation/_menus.scss */
 .main-navigation.toggled ul {
   margin-top: 50px;
 }
 
 @media (min-width: 50em) {
-  /* line 95, sass/navigation/_menus.scss */
+  /* line 103, sass/navigation/_menus.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 98, sass/navigation/_menus.scss */
+  /* line 106, sass/navigation/_menus.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 107, sass/navigation/_menus.scss */
+/* line 115, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 112, sass/navigation/_menus.scss */
+/* line 120, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 117, sass/navigation/_menus.scss */
+/* line 125, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
