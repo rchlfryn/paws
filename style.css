@@ -698,7 +698,7 @@ big {
 }
 
 /* line 23, sass/layout/_home.scss */
-.main-content {
+.main-content-home {
   max-width: 1080px;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
@@ -801,6 +801,7 @@ big {
 /* line 2, sass/elements/_sidebar.scss */
 .main-content {
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 50em) {
   /* line 2, sass/elements/_sidebar.scss */
@@ -812,19 +813,19 @@ big {
 }
 
 @media (min-width: 50em) {
-  /* line 11, sass/elements/_sidebar.scss */
+  /* line 12, sass/elements/_sidebar.scss */
   .site-main {
     margin: 0 25% 0 0;
   }
 }
 
-/* line 17, sass/elements/_sidebar.scss */
+/* line 18, sass/elements/_sidebar.scss */
 .site-content .widget-area {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 50em) {
-  /* line 17, sass/elements/_sidebar.scss */
+  /* line 18, sass/elements/_sidebar.scss */
   .site-content .widget-area {
     float: right;
     overflow: hidden;
@@ -832,7 +833,7 @@ big {
   }
 }
 
-/* line 27, sass/elements/_sidebar.scss */
+/* line 28, sass/elements/_sidebar.scss */
 .site-footer {
   clear: both;
   width: 100%;

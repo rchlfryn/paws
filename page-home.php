@@ -28,7 +28,7 @@ get_header(); ?>
 
 	<!-- Main content -->
 	<main id="main" role="main">
-		<div class="main-content">
+		<div class="main-content-home">
 			<div class="boxes">
 				<div class="testimonial" >
 					<?php the_field('testimonial'); ?> 
