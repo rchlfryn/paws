@@ -13,33 +13,28 @@
  */
 
 get_header(); ?>
-<div class="content-container">
-	<div id="primary" class="content-area">
+<div id="about-page" class="content-container">
 		<main id="main" class="site-main" role="main">
+			<div class="main-content">
 
-		<?php
-		if ( have_posts() ) :
-			the_title( '<h2 class="entry-title">', '</h2>' );
+				<div class="lead-img-about">
+					<img src="http://placehold.it/1000x100">
+				</div>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-				// the content (pretty self explanatory huh)
-				the_content();
-			endwhile;
-
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+				<?php
+					if ( have_posts() ) :
+						the_title( '<h2 class="entry-title">', '</h2>' );
+					/* Start the Loop */
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile;
+				endif; ?>
+			</div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<?php
-get_sidebar();
-?>
-</div>
-<?php
-get_footer();
+	<!-- Sidebar -->
+	<?php get_sidebar(); ?>
+	
+</div> <!-- .content-container -->
+
+<?php get_footer();

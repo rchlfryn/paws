@@ -1,3 +1,11 @@
+.footer {
+	background-color: #333333;
+	min-height: 140px;
+	position: relative;
+	margin-top: 100px;
+	padding-top: 50px;
+}
+
 .pre-footer {
 	background-image: url('../paws/images/grass.png');
 	background-position: center top;
@@ -8,10 +16,3 @@
 	position: absolute;
 }
 
-.footer {
-	background-color: #333333;
-	min-height: 200px;
-	position: relative;
-	margin-top: 100px;
-	padding-top: 50px;
-}

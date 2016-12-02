@@ -370,9 +370,9 @@ html {
 
 /* line 11, sass/default/_elements.scss */
 body {
-  background: #fff;
+  background-color: #003263;
   /* Fallback for when there is no custom background color defined. */
-  background: url("../paws/images/paws_bg.png");
+  background-image: url("../paws/images/paws_bg.png");
 }
 
 /* line 16, sass/default/_elements.scss */
@@ -589,6 +589,13 @@ input[type="submit"]:focus {
   display: block;
 }
 
+/* line 5, sass/default/_structure.scss */
+.content-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
 /* line 8, sass/default/_typography.scss */
 body,
 button,
@@ -667,23 +674,19 @@ big {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-/* line 1, sass/layout/_base.scss */
-.content-container {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-/* line 6, sass/layout/_base.scss */
+/* line 4, sass/layout/_home.scss */
 .hero {
   position: relative;
   width: 100%;
 }
-/* line 9, sass/layout/_base.scss */
+/* line 7, sass/layout/_home.scss */
 .hero #hero-background {
-  min-height: 70vh;
+  height: 70vh;
+  min-height: 740px;
+  margin-top: 150px;
 }
 
-/* line 14, sass/layout/_base.scss */
+/* line 13, sass/layout/_home.scss */
 .hero-cta {
   position: absolute;
   top: 0;
@@ -691,50 +694,39 @@ big {
   right: 0;
   left: 0;
   margin: auto;
-  height: 100px;
-  width: 370px;
+  height: 80px;
 }
 
-/* line 22, sass/layout/_base.scss */
+/* line 23, sass/layout/_home.scss */
+.main-content {
+  max-width: 1080px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
+}
+
+/* line 30, sass/layout/_home.scss */
+.testimonial {
+  display: inline-block;
+  width: 58%;
+}
+
+/* line 34, sass/layout/_home.scss */
 .box {
-  background: grey;
   width: 29%;
   height: 200px;
   display: inline-block;
   position: relative;
 }
 
-/* line 29, sass/layout/_base.scss */
-.testimonial {
-  display: inline-block;
-  width: 58%;
-}
-
-/* line 33, sass/layout/_base.scss */
+/* line 41, sass/layout/_home.scss */
 .calendar {
   float: right;
   width: 40%;
 }
 
-/* line 37, sass/layout/_base.scss */
-.main-text-area {
+/* line 46, sass/layout/_home.scss */
+.home-content {
   clear: both;
-}
-
-/* line 41, sass/layout/_base.scss */
-.main-content,
-.site-main {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* line 45, sass/layout/_base.scss */
-.content-container {
-  padding-top: 150px;
-}
-
-/* line 49, sass/layout/_base.scss */
-.site-main {
-  padding: 10px 20px;
 }
 
 /* line 1, sass/layout/_staff.scss */
@@ -765,12 +757,12 @@ big {
 }
 
 /* line 1, sass/elements/_header.scss */
-.site-header {
+.header {
   margin: 0 auto;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 101;
   background-color: #003263;
 }
 
@@ -787,6 +779,15 @@ big {
 }
 
 /* line 1, sass/elements/_footer.scss */
+.footer {
+  background-color: #333333;
+  min-height: 140px;
+  position: relative;
+  margin-top: 100px;
+  padding-top: 50px;
+}
+
+/* line 9, sass/elements/_footer.scss */
 .pre-footer {
   background-image: url("../paws/images/grass.png");
   background-position: center top;
@@ -797,22 +798,13 @@ big {
   position: absolute;
 }
 
-/* line 11, sass/elements/_footer.scss */
-.footer {
-  background-color: #333333;
-  min-height: 200px;
-  position: relative;
-  margin-top: 100px;
-  padding-top: 50px;
-}
-
 /* line 2, sass/elements/_sidebar.scss */
-.content-area {
+.main-content {
   width: 100%;
 }
 @media (min-width: 50em) {
   /* line 2, sass/elements/_sidebar.scss */
-  .content-area {
+  .main-content {
     float: left;
     margin: 0 -25% 0 0;
     width: 100%;
@@ -877,26 +869,26 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_menus.scss */
-.main-navigation {
+.main-nav {
   display: block;
   float: right;
   margin: 30px 0;
 }
 @media (min-width: 50em) {
   /* line 1, sass/navigation/_menus.scss */
-  .main-navigation {
+  .main-nav {
     margin: 50px 0;
   }
 }
 /* line 10, sass/navigation/_menus.scss */
-.main-navigation ul {
+.main-nav ul {
   display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 /* line 16, sass/navigation/_menus.scss */
-.main-navigation ul ul {
+.main-nav ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
@@ -905,47 +897,47 @@ a:hover, a:active {
   z-index: 99999;
 }
 /* line 24, sass/navigation/_menus.scss */
-.main-navigation ul ul ul {
+.main-nav ul ul ul {
   left: -999em;
   top: 0;
 }
 /* line 30, sass/navigation/_menus.scss */
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+.main-nav ul ul li:hover > ul, .main-nav ul ul li.focus > ul {
   left: 100%;
 }
 /* line 36, sass/navigation/_menus.scss */
-.main-navigation ul ul a {
+.main-nav ul ul a {
   width: 200px;
 }
 /* line 50, sass/navigation/_menus.scss */
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-nav ul li:hover > ul,
+.main-nav ul li.focus > ul {
   left: auto;
 }
 /* line 56, sass/navigation/_menus.scss */
-.main-navigation li {
+.main-nav li {
   position: relative;
   padding: 10px 30px;
   border-right: 3px solid white;
   cursor: pointer;
 }
 /* line 62, sass/navigation/_menus.scss */
-.main-navigation li:last-child {
+.main-nav li:last-child {
   border-right: 0;
 }
 @media (min-width: 50em) {
   /* line 56, sass/navigation/_menus.scss */
-  .main-navigation li {
+  .main-nav li {
     float: left;
   }
 }
 /* line 69, sass/navigation/_menus.scss */
-.main-navigation li:hover > a, .main-navigation li.focus > a {
+.main-nav li:hover > a, .main-nav li.focus > a {
   cursor: pointer;
   text-decoration: underline;
 }
 /* line 76, sass/navigation/_menus.scss */
-.main-navigation a {
+.main-nav a {
   display: block;
   text-decoration: none;
   color: white;
@@ -954,7 +946,7 @@ a:hover, a:active {
 /* Small menu. */
 /* line 90, sass/navigation/_menus.scss */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
   display: block;
 }
 
@@ -965,7 +957,7 @@ a:hover, a:active {
 }
 
 /* line 99, sass/navigation/_menus.scss */
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
   margin-top: 50px;
 }
 
@@ -976,7 +968,7 @@ a:hover, a:active {
   }
 
   /* line 106, sass/navigation/_menus.scss */
-  .main-navigation ul {
+  .main-nav ul {
     display: block;
   }
 }

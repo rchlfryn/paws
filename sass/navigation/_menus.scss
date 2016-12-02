@@ -1,4 +1,4 @@
-.main-navigation {
+.main-nav {
 	// clear: both;
 	display: block;
 	float: right;
@@ -88,7 +88,7 @@
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
 	display: block;
 }
 
@@ -96,14 +96,14 @@
 	position: absolute;
 	right: 0;
 }
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
 	margin-top: 50px;
 }
 @include breakpoint ('tablet') {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.main-nav ul {
 		display: block;
 	}
 }

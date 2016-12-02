@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 	
-	<footer class="footer" role="contentinfo">
+	<footer class="footer">
 		<div class="pre-footer"></div>
 		<div class="footer-inner">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'blank' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'blank' ), 'WordPress' ); ?></a>

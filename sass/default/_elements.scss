@@ -9,8 +9,8 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-	background: url('../paws/images/paws_bg.png')
+	background-color: $blue; /* Fallback for when there is no custom background color defined. */
+	background-image: url('../paws/images/paws_bg.png');
 }
 
 blockquote, q {

@@ -1,0 +1,48 @@
+$hero-btn-height: 80px;
+
+// Hero
+.hero {
+	position: relative;
+	width: 100%;
+	#hero-background {
+		height: 70vh;
+		min-height: 740px;
+		margin-top: 150px;
+	}
+}
+.hero-cta {
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+	margin: auto;
+	height: $hero-btn-height;
+	// width: 370px;
+}
+
+
+// Main content
+.main-content {
+	max-width: $max-container;
+	background-color: rgba(255,255,255,0.5);
+	margin: 0 auto;
+}
+
+
+.testimonial {
+	display: inline-block;
+	width: 58%
+}
+.box {
+	width: 29%;
+	height: 200px;
+	display: inline-block;
+	position: relative;
+}
+
+.calendar {
+	float: right;
+	width: 40%;
+}
+
+.home-content {
+	clear: both;
+}
