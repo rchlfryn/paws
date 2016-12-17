@@ -17,8 +17,33 @@
 get_header(); ?>
 
 <?php 
-	$args = array( 'post_type' => 'staff', 'posts_per_page' => -1, 'order' => 'ASC' );
-	$loop = new WP_Query( $args ); 
+	$core = new WP_Query(array(
+          'post_type' => 'staff',
+          'posts_per_page' => -1,
+					// 'meta_key' => 'order',
+					// 'orderby'	=> 'meta_value_num',
+          'order' => 'ASC',
+          'tax_query' => array(
+                array(
+                'taxonomy' => 'custom_cat',
+                'field' => 'slug',
+                'terms' => 'core'
+                )
+          )));
+		$seasonal = new WP_Query(array(
+          'post_type' => 'staff',
+          'posts_per_page' => -1,
+					// 'meta_key' => 'order',
+					// 'orderby'	=> 'meta_value_num',
+          'order' => 'ASC',
+          'tax_query' => array(
+                array(
+                'taxonomy' => 'custom_cat',
+                'field' => 'slug',
+                'terms' => 'seasonal'
+                )
+          ))
+		); 
 ?>
 
 <div id="staff-page" class="content-container">
@@ -31,10 +56,12 @@ get_header(); ?>
 					<h3 class="staff-name-selected"> Click staff photo below</h3>
 				</div>
 
+				<!-- Core staff grid -->
 				<h2 class="staff-active">Active Staff</h2>
 
-				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<?php while ( $core->have_posts() ) : $core->the_post(); ?>
 					<div class="staff-member">
+						<div class="staff-image"><?php the_post_thumbnail(); ?></div>
 
 			 			<div class="staff-content">
 				 			<h3 class="staff-name">
@@ -45,7 +72,28 @@ get_header(); ?>
 							</div>
 						</div>
 
+						
+					</div>
+				<?php endwhile; ?>
+		
+				<div class="clearfix"></div>
+								<!-- Core staff grid -->
+				<h2 class="staff-active">Seasonal Staff</h2>
+
+				<?php while ( $seasonal->have_posts() ) : $seasonal->the_post(); ?>
+					<div class="staff-member">
 						<div class="staff-image"><?php the_post_thumbnail(); ?></div>
+
+			 			<div class="staff-content">
+				 			<h3 class="staff-name">
+				 				<?php the_title(); ?>
+				 			</h3>
+							<div class="staff-bio">
+								<?php the_content();?>
+							</div>
+						</div>
+
+						
 					</div>
 				<?php endwhile; ?>
 		

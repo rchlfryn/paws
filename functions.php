@@ -180,11 +180,33 @@ function add_custom_post_type() {
 			'public'       => true,
 			'rewrite'      => array( 'slug' => 'members', 'with_front' => false ),
 			'can_export'          => true,
-			'supports'     => array( 'title', 'editor', 'excerpt',  'thumbnail', 'custom-fields' ),
-			'taxonomies'   => array( 'category' ),
+			'supports'     => array( 'title', 'editor', 'thumbnail' ),
       'menu_position' => 4
 		));	
 }
+
+	// now let's add custom categories (these act like categories)
+	register_taxonomy( 'custom_cat', 
+		array('staff'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+		array('hierarchical' => true,     /* if this is true, it acts like categories */
+			'labels' => array(
+				'name' => __( 'Staff Categories', 'wp_blank' ), /* name of the custom taxonomy */
+				'singular_name' => __( 'Staff Category', 'wp_blank' ), /* single taxonomy name */
+				'search_items' =>  __( 'Search Staff Categories', 'wp_blank' ), /* search title for taxomony */
+				'all_items' => __( 'All Staff Categories', 'wp_blank' ), /* all title for taxonomies */
+				'parent_item' => __( 'Parent Staff Category', 'wp_blank' ), /* parent title for taxonomy */
+				'parent_item_colon' => __( 'Parent Staff Category:', 'wp_blank' ), /* parent taxonomy title */
+				'edit_item' => __( 'Edit Staff Category', 'wp_blank' ), /* edit custom taxonomy title */
+				'update_item' => __( 'Update Staff Category', 'wp_blank' ), /* update title for taxonomy */
+				'add_new_item' => __( 'Add New Staff Category', 'wp_blank' ), /* add new title for taxonomy */
+				'new_item_name' => __( 'New Staff Category Name', 'wp_blank' ) /* name title for taxonomy */
+			),
+			'show_admin_column' => true, 
+			'show_ui' => true,
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'custom-slug' ),
+		)
+	);
 
 	
 

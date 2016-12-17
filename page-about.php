@@ -18,12 +18,13 @@ get_header(); ?>
 			<div class="main-content">
 
 				<div class="lead-img-about">
-					<img src="http://placehold.it/1000x100">
+					<?php if ( has_post_thumbnail() ) {	the_post_thumbnail();	}?>
 				</div>
 
 				<?php
 					if ( have_posts() ) :
 						the_title( '<h2 class="entry-title">', '</h2>' );
+					
 					/* Start the Loop */
 						while ( have_posts() ) : the_post();
 							the_content();

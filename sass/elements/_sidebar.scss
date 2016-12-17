@@ -1,17 +1,17 @@
-//Right sidebar
-.main-content {
-	width: 100%;
-	background-color: rgba(255,255,255,0.5);
-	@include breakpoint ('tablet'){
-		float: left;
-		margin: 0 (-$size__site-sidebar) 0 0;
-		width: $size__site-main;
-	}
-}
 
 .site-main {
+	// @include breakpoint ('tablet'){
+	// 	margin: 0 $size__site-sidebar 0 0;
+	// }
+}
+//Right sidebar
+.main-content {
+	width: $size__site-main;
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px;
 	@include breakpoint ('tablet'){
-		margin: 0 $size__site-sidebar 0 0;
+		float: left;
+		width: 73%;
 	}
 }
 

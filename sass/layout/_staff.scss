@@ -7,9 +7,15 @@
 	float: left;
 	width: 24%;
 	margin-right: 1%;
-	background: grey;
+	min-height: 200px;
 }
 
 .staff-content {
-	display: none;
+	.staff-name{
+		margin: 0;
+	}
+	.staff-bio{
+		display: none;
+	}
+
 }
