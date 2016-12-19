@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
 /* line 25, sass/default/_mixins.scss */
 .clearfix {
   clear: both;
@@ -480,14 +481,39 @@ table {
 /* line 103, sass/default/_elements.scss */
 .outline-btn {
   border: 3px solid #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
   color: #fff;
+  text-decoration: none;
   /* Button 1a */
 }
-/* line 108, sass/default/_elements.scss */
+/* line 112, sass/default/_elements.scss */
 .outline-btn:hover, .outline-btn:active {
   cursor: pointer;
-  color: #003263;
   background: #fff;
+  color: #003263;
+}
+
+/* Button 1 */
+/* line 121, sass/default/_elements.scss */
+.sidebar-btn {
+  border: 3px solid #fff;
+  color: #fff;
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  padding: 20px;
+  /* Button 1a */
+}
+/* line 129, sass/default/_elements.scss */
+.sidebar-btn:hover, .sidebar-btn:active {
+  cursor: pointer;
+  background: #fff;
+  color: #003263;
 }
 
 /* line 1, sass/default/_forms.scss */
@@ -601,20 +627,20 @@ input[type="submit"]:focus {
   src: url("assets/fonts/DK_Lemon_Yellow_Sun.otf");
   /* IE9 Compat Modes */
 }
-/* line 13, sass/default/_typography.scss */
+/* line 15, sass/default/_typography.scss */
 body,
 button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #fff;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* line 24, sass/default/_typography.scss */
+/* line 26, sass/default/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-size: 32px;
@@ -622,27 +648,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DKLemon";
 }
 
-/* line 30, sass/default/_typography.scss */
+/* line 32, sass/default/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 34, sass/default/_typography.scss */
+/* line 36, sass/default/_typography.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 38, sass/default/_typography.scss */
+/* line 40, sass/default/_typography.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 42, sass/default/_typography.scss */
+/* line 44, sass/default/_typography.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 46, sass/default/_typography.scss */
+/* line 48, sass/default/_typography.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -655,26 +681,26 @@ pre {
   padding: 1.6em;
 }
 
-/* line 57, sass/default/_typography.scss */
+/* line 59, sass/default/_typography.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-/* line 62, sass/default/_typography.scss */
+/* line 64, sass/default/_typography.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 67, sass/default/_typography.scss */
+/* line 69, sass/default/_typography.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 72, sass/default/_typography.scss */
+/* line 74, sass/default/_typography.scss */
 big {
   font-size: 125%;
 }
@@ -691,89 +717,101 @@ big {
 .hero #hero-background {
   height: 70vh;
   min-height: 740px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
-/* line 13, sass/layout/_home.scss */
+/* line 14, sass/layout/_home.scss */
 .hero-cta {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
   height: 80px;
+  width: 320px;
 }
 
-/* line 24, sass/layout/_home.scss */
+/* line 21, sass/layout/_home.scss */
 .main-content-home {
   max-width: 1080px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(97, 116, 143, 0.8);
   margin: 0 auto;
 }
 
-/* line 31, sass/layout/_home.scss */
-.testimonial {
-  display: inline-block;
-  width: 100%;
-}
-@media (min-width: 50em) {
-  /* line 31, sass/layout/_home.scss */
-  .testimonial {
-    width: 58%;
-  }
+/* line 28, sass/layout/_home.scss */
+.top-content,
+.bottom-content {
+  clear: both;
+  padding: 2em;
 }
 
-/* line 38, sass/layout/_home.scss */
+/* line 34, sass/layout/_home.scss */
 .box {
   width: 100%;
   height: 200px;
   display: inline-block;
   position: relative;
+  padding: 1em;
 }
 @media (min-width: 50em) {
-  /* line 38, sass/layout/_home.scss */
+  /* line 34, sass/layout/_home.scss */
   .box {
     width: 58%;
   }
 }
 
-/* line 48, sass/layout/_home.scss */
+/* line 46, sass/layout/_home.scss */
+.box-bg {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 52, sass/layout/_home.scss */
 .calendar {
   float: right;
   width: 100%;
 }
 @media (min-width: 50em) {
-  /* line 48, sass/layout/_home.scss */
+  /* line 52, sass/layout/_home.scss */
   .calendar {
     width: 40%;
   }
 }
 
-/* line 56, sass/layout/_home.scss */
-.home-content {
-  clear: both;
-}
-
 /* line 1, sass/layout/_staff.scss */
 .staff-selected {
   width: 100%;
-  text-align: center;
 }
 
-/* line 6, sass/layout/_staff.scss */
+/* line 5, sass/layout/_staff.scss */
+.staff-image-selected {
+  width: 25%;
+  float: left;
+}
+
+/* line 9, sass/layout/_staff.scss */
+.staff-content-selected {
+  width: 70%;
+  float: left;
+  margin-left: 4%;
+  text-align: left;
+}
+
+/* line 16, sass/layout/_staff.scss */
 .staff-member {
   float: left;
   width: 24%;
   margin-right: 1%;
   min-height: 200px;
+  cursor: pointer;
 }
 
-/* line 14, sass/layout/_staff.scss */
+/* line 28, sass/layout/_staff.scss */
+.staff-content {
+  cursor: pointer;
+}
+/* line 30, sass/layout/_staff.scss */
 .staff-content .staff-name {
   margin: 0;
+  height: 70px;
+  text-align: center;
 }
-/* line 17, sass/layout/_staff.scss */
+/* line 35, sass/layout/_staff.scss */
 .staff-content .staff-bio {
   display: none;
 }
@@ -783,7 +821,14 @@ big {
 --------------------------------------------------------------*/
 /* line 2, sass/elements/_calendar.scss */
 .simcal-day-label > span {
-  background-color: #ccc !important;
+  background-color: transparent !important;
+  font-family: "DKLemon";
+  font-size: 1.3em;
+}
+
+/* line 9, sass/elements/_calendar.scss */
+.simcal-default-calendar-list ul.simcal-events {
+  padding-left: 0 !important;
 }
 
 /* line 1, sass/elements/_header.scss */
@@ -804,7 +849,7 @@ big {
 
 /* line 15, sass/elements/_header.scss */
 .logo {
-  width: 20%;
+  width: 16%;
   float: left;
 }
 
@@ -904,7 +949,7 @@ a:hover, a:active {
 @media (min-width: 50em) {
   /* line 1, sass/navigation/_menus.scss */
   .main-nav {
-    margin: 50px 0;
+    margin: 40px 0;
   }
 }
 /* line 12, sass/navigation/_menus.scss */

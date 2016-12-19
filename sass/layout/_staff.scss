@@ -1,6 +1,16 @@
 .staff-selected {
 	width: 100%;
-	text-align: center;
+}
+
+.staff-image-selected {
+	width: 25%;
+	float: left;
+}
+.staff-content-selected {
+	width: 70%;
+	float: left;
+	margin-left: 4%;
+	text-align: left;
 }
 
 .staff-member {
@@ -8,11 +18,19 @@
 	width: 24%;
 	margin-right: 1%;
 	min-height: 200px;
+	cursor: pointer;
+}
+
+.staff-image {
+	// width: 500px;
 }
 
 .staff-content {
+	cursor: pointer;
 	.staff-name{
 		margin: 0;
+		height: 70px;
+		text-align: center;
 	}
 	.staff-bio{
 		display: none;

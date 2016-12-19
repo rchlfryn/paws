@@ -22,31 +22,38 @@ get_header(); ?>
 	<!-- Hero section -->
 	<div class="hero">
 		<div id="hero-background" style="background: url(<?php echo $hero_background['url']; ?>); background-size: cover;">
-			<button class="btn hero-cta outline-btn">Start training</button>
+			<button class="btn hero-cta outline-btn" onclick="location.href='/training'">Start training</button>
 		</div>
 	</div>
 
 	<!-- Main content -->
 	<main id="main" role="main">
 		<div class="main-content-home">
-			<div class="boxes">
-				<div class="testimonial" >
-					<?php the_field('testimonial'); ?> 
-				</div>
-				<div class="calendar"><?php the_field('calendar_link'); ?></div>
-				<div class="box" style="background: url(<?php echo $about_photo['url']; ?>); background-size: cover;">
-					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
-				</div>
-				<div class="box" style="background: url(<?php echo $id_camp_photo['url']; ?>); background-size: cover;">
-					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
-				</div>
-			</div>
 
-			<div class="home-content">
+			<div class="top-content">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<?php	the_content();	?>
 				<?php endwhile; endif; ?>
 			</div>
+
+			<div class="boxes">
+				<div class="calendar"><?php the_field('calendar_link'); ?></div>
+				<div class="box">
+					<div class="box-bg" style="background: url(<?php echo $about_photo['url']; ?>); background-size: cover;"></div>
+					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
+				</div>
+				<div class="box">
+					<div class="box-bg" style="background: url(<?php echo $id_camp_photo['url']; ?>); background-size: cover;"></div>
+					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
+				</div>
+			</div>
+
+			<div class="bottom-content">
+				<div class="testimonial" > 
+					<?php the_field('testimonial'); ?> 
+				</div>
+			</div>
+
 		</div>
 	</main><!-- #main -->
 

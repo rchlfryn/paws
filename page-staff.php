@@ -48,12 +48,18 @@ get_header(); ?>
 
 <div id="staff-page" class="content-container">
 		<main id="main" class="site-main" role="main">
+
 			<div class="main-content">
+			<h3 class=""> Click staff photo below</h3>
 
 				<!-- Mainstaff memeber selected -->
 				<div class="staff-selected">
 					<div class="staff-image-selected"><img src=""></div>
-					<h3 class="staff-name-selected"> Click staff photo below</h3>
+					<div class="staff-content-selected">
+						<h3 class="staff-name-selected"></h3>
+						<div class="staff-bio-selected"></div>
+					</div>
+
 				</div>
 
 				<!-- Core staff grid -->
@@ -64,9 +70,9 @@ get_header(); ?>
 						<div class="staff-image"><?php the_post_thumbnail(); ?></div>
 
 			 			<div class="staff-content">
-				 			<h3 class="staff-name">
+				 			<p class="staff-name">
 				 				<?php the_title(); ?>
-				 			</h3>
+				 			</p>
 							<div class="staff-bio">
 								<?php the_content();?>
 							</div>
@@ -85,9 +91,9 @@ get_header(); ?>
 						<div class="staff-image"><?php the_post_thumbnail(); ?></div>
 
 			 			<div class="staff-content">
-				 			<h3 class="staff-name">
+				 			<p class="staff-name">
 				 				<?php the_title(); ?>
-				 			</h3>
+				 			</p>
 							<div class="staff-bio">
 								<?php the_content();?>
 							</div>
@@ -98,6 +104,12 @@ get_header(); ?>
 				<?php endwhile; ?>
 		
 				<div class="clearfix"></div>
+
+			<div class="top-content">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php	the_content();	?>
+				<?php endwhile; endif; ?>
+			</div>
 				
 			</div> <!-- .main-content -->
 		</main><!-- #main -->

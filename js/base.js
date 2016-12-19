@@ -13,10 +13,13 @@
 	  $('.staff-member').removeClass('active');
 	  $(this).addClass('active');
 	 	var activeStaffName = $(this).find('.staff-name')[0].innerText;
+	 	var activeStaffBio = $(this).find('.staff-bio')[0].innerText;
 	 	var activeStaffImage = $(this).find('.staff-image img').attr('src');
-	 	console.log(activeStaffImage)
-	 	$('.staff-name-selected')[0].innerText = activeStaffName;
+	 	// console.log(activeStaffImage)
 	 	$('.staff-image-selected img').attr('src', activeStaffImage);
+	 	$('.staff-name-selected')[0].innerText = activeStaffName;
+	 	$('.staff-bio-selected')[0].innerText = activeStaffBio;
+
 	})
 
 } )( jQuery );

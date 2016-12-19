@@ -6,7 +6,7 @@
 	font-family: $font__headline;
 	@include font-size(1.4);
 	@include breakpoint ('tablet') {
-		margin: 50px 0;
+		margin: 40px 0;
 	}
 
 	ul {

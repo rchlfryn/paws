@@ -1,5 +1,12 @@
 .simcal-day-label {
 	& > span{
-		background-color: #ccc !important;
+		background-color: transparent !important;
+		font-family: $font__headline;
+		font-size: 1.3em;
 	}
+}
+
+.simcal-default-calendar-list ul.simcal-events {
+	// margin: 0 !important;
+	padding-left: 0 !important;
 }

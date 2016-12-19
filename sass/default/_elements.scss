@@ -102,14 +102,38 @@ table {
 /* Button 1 */
 .outline-btn {
 	border: 3px solid #fff;
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+	margin: auto;
 	color: #fff;
+	text-decoration: none;
 
 	/* Button 1a */
 	&:hover,
 	&:active {
 		cursor: pointer;
-		color: $blue;
 		background: #fff;
+		color: $blue;
+	
 	}
 }
+/* Button 1 */
+.sidebar-btn {
+	border: 3px solid #fff;
+	color: #fff;
+	width: 90%;
+	margin: 10px auto;
+	display: block;
+	padding: 20px;
+	/* Button 1a */
+	&:hover,
+	&:active {
+		cursor: pointer;
+		background: #fff;
+		color: $blue;
+	
+	}
+}
+
+
 
