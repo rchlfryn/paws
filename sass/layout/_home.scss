@@ -4,10 +4,15 @@ $hero-btn-height: 80px;
 .hero {
 	position: relative;
 	width: 100%;
+
 	#hero-background {
-		height: 70vh;
-		min-height: 740px;
+		height: 40vh;
 		margin-top: 100px;
+		@include breakpoint ('tablet'){
+			height: 70vh;
+			min-height: 740px;
+
+		}
 	}
 }
 

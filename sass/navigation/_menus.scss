@@ -1,12 +1,13 @@
 .main-nav {
-	// clear: both;
 	display: block;
-	float: right;
 	margin: 30px 0;
 	font-family: $font__headline;
 	@include font-size(1.4);
+	clear: both;
 	@include breakpoint ('tablet') {
 		margin: 40px 0;
+		float: right;
+
 	}
 
 	ul {
@@ -106,7 +107,9 @@
 
 .menu-toggle {
 	position: absolute;
-	right: 0;
+	right: 2em;
+	top: 1em;
+	-webkit-appearance: none;
 }
 .main-nav.toggled ul {
 	margin-top: 50px;
