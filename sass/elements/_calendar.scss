@@ -1,3 +1,8 @@
+.simcal-default-calendar-list {
+	background-color: rgba(0, 50, 99,.9) !important;
+	margin: 10px !important;
+}
+
 .simcal-day-label {
 	& > span{
 		background-color: transparent !important;
@@ -10,3 +15,8 @@
 	// margin: 0 !important;
 	padding-left: 0 !important;
 }
+
+.instashow-gallery .instashow-gallery-media-cover {
+	background-color: rgba(0, 50, 99,.9) !important;
+}
+

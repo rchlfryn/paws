@@ -5,6 +5,7 @@
 	@include font-size(1.4);
 	clear: both;
 	@include breakpoint ('tablet') {
+		clear: none;
 		margin: 40px 0;
 		float: right;
 
