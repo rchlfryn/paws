@@ -15,14 +15,20 @@
 get_header(); ?>
 <?php 
 	$hero_background = get_field('hero_background');
-	$about_photo = get_field('about_photo');
-	$id_camp_photo = get_field('id_camp_photo');
+	$hero_question = get_field('training_question');
+	$photo_one = get_field('photo_one');
+	$photo_two = get_field('photo_two');
 	$testimonial = get_field('testimonial');
 ?>
 	<!-- Hero section -->
 	<div class="hero">
 		<div id="hero-background" style="background: url(<?php echo $hero_background['url']; ?>); background-size: cover;">
-			<button class="btn hero-cta outline-btn" onclick="location.href='/training'">Start training</button>
+			<button id="button-question" class="btn hero-cta outline-btn">Start training</button>
+			<div class="training-buttons">
+				<h1 class="training-question"><?php the_field('training_question'); ?></h1>
+				<button class="btn training-cta training-btn" onclick="location.href='<?php the_field('sign_up_page'); ?>'">- Yes -<br>I want to sign up</button>
+				<button class="btn training-cta training-btn" onclick="location.href='<?php the_field('training_page'); ?>'">- No -<br> I want to learn more</button>
+			</div>
 		</div>
 	</div>
 
@@ -39,18 +45,18 @@ get_header(); ?>
 			<div class="boxes">
 				<div class="calendar"><?php the_field('calendar_link'); ?></div>
 				<div class="box">
-					<div class="box-bg" style="background: url(<?php echo $about_photo['url']; ?>); background-size: cover;"></div>
-					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
+					<img class="box-bg" src="<?php echo $photo_one['url']; ?>">
+					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">About PAWS</button>
 				</div>
 				<div class="box">
-					<div class="box-bg" style="background: url(<?php echo $id_camp_photo['url']; ?>); background-size: cover;"></div>
-					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Training</button>
+					<img class="box-bg" src="<?php echo $photo_two['url']; ?>">
+					<button onclick="location.href='/training'" class="btn hero-cta outline-btn">Our Staff</button>
 				</div>
 			</div>
 
 			<div class="bottom-content">
-				<div class="testimonial" > 
-					<?php the_field('testimonial'); ?> 
+				<div class="below-home" > 
+					<?php the_field('below-home'); ?> 
 				</div>
 			</div>
 

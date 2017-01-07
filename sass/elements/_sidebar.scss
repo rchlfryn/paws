@@ -7,18 +7,21 @@
 //Right sidebar
 .main-content {
 	width: $size__site-main;
-	background-color: rgba(255,255,255,0.5);
-	padding: 10px;
+	background-color: rgba(97, 116, 143, 0.8);
+	padding: 1em 2em;
 	@include breakpoint ('tablet'){
 		float: left;
 		width: 73%;
+		min-height: 800px;
 	}
 }
 
 .site-content .widget-area {
 	width: 100%;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(97, 116, 143, 0.8);
+	display: none;
 	@include breakpoint ('tablet'){
+		display: block;
 		float: right;
 		overflow: hidden;
 		width: $size__site-sidebar;

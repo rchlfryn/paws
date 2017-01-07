@@ -13,17 +13,21 @@
  */
 
 get_header(); ?>
+<?php
+$thumb_id = get_post_thumbnail_id();
+$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+?>
 <div id="training-page" class="content-container">
 		<main id="main" class="site-main" role="main">
-			<div class="main-content">
 
-				<div class="lead-img-training">
-					<img src="http://placehold.it/1000x100">
-				</div>
+		<div class="lead-img-training" style="background-image: url(<?php echo $thumb_url[0]; ?>); ">
+		</div>
+
+			<div class="main-content">
 
 				<?php
 					if ( have_posts() ) :
-						the_title( '<h2 class="entry-title">', '</h2>' );
+						the_title( '<h1 class="entry-title">', '</h1>' );
 					/* Start the Loop */
 						while ( have_posts() ) : the_post();
 							the_content();

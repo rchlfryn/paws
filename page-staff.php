@@ -15,8 +15,11 @@
 
 
 get_header(); ?>
+<?php
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+	$alumni = get_field('alumni');
 
-<?php 
 	$core = new WP_Query(array(
           'post_type' => 'staff',
           'posts_per_page' => -1,
@@ -48,9 +51,17 @@ get_header(); ?>
 
 <div id="staff-page" class="content-container">
 		<main id="main" class="site-main" role="main">
-
+		<div class="lead-img-staff" style="background-image: url(<?php echo $thumb_url[0]; ?>); ">
+		</div>
 			<div class="main-content">
-			<h3 class=""> Click staff photo below</h3>
+				<?php
+					if ( have_posts() ) :
+						the_title( '<h1 class="entry-title">', '</h1>' );
+					/* Start the Loop */
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile;
+					endif; ?>
 
 				<!-- Mainstaff memeber selected -->
 				<div class="staff-selected">
@@ -106,9 +117,8 @@ get_header(); ?>
 				<div class="clearfix"></div>
 
 			<div class="top-content">
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						<?php	the_content();	?>
-				<?php endwhile; endif; ?>
+				<?php echo $alumni; ?>
+
 			</div>
 				
 			</div> <!-- .main-content -->

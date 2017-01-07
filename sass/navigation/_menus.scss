@@ -82,8 +82,7 @@
 		&:hover > a,
 		&.focus > a {
 			cursor: pointer;
-			// text-decoration: underline;
-			font-style: italic;
+			text-decoration: underline;
 		}
 	}
 
@@ -97,6 +96,8 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		text-decoration: underline;
+
 	}
 }
 
@@ -109,8 +110,14 @@
 .menu-toggle {
 	position: absolute;
 	right: 2em;
-	top: 1em;
+	top: 1.6em;
+	background-color: rgba(97, 116, 143, .8);
+	border: 2px solid white;
 	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	padding: .6em;
+	line-height: 1.2;
 }
 .main-nav.toggled ul {
 	margin-top: 50px;

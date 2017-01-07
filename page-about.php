@@ -13,17 +13,22 @@
  */
 
 get_header(); ?>
+
+<?php
+$thumb_id = get_post_thumbnail_id();
+$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+?>
+
 <div id="about-page" class="content-container">
 		<main id="main" class="site-main" role="main">
-			<div class="main-content">
 
-				<div class="lead-img-about">
-					<?php if ( has_post_thumbnail() ) {	the_post_thumbnail();	}?>
-				</div>
+		<div class="lead-img-about" style="background-image: url(<?php echo $thumb_url[0]; ?>); ">
+		</div>
+			<div class="main-content">
 
 				<?php
 					if ( have_posts() ) :
-						the_title( '<h2 class="entry-title">', '</h2>' );
+						the_title( '<h1 class="entry-title">', '</h1>' );
 					
 					/* Start the Loop */
 						while ( have_posts() ) : the_post();

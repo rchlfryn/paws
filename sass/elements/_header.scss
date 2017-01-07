@@ -4,7 +4,7 @@
 	top: 0;
 	width: 100%;
 	z-index: 101;
-	background-color: $blue;
+	background-color: rgba(25,50,93,0.93);
 }
 
 .header-container {
@@ -13,6 +13,9 @@
 }
 
 .logo {
-	width: 16%;
+	width: 120px;
 	float: left;
+	@include breakpoint ('tablet'){
+		width: 16%;
+	}
 }

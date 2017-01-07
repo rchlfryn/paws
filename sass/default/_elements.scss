@@ -107,6 +107,26 @@ table {
 	margin: auto;
 	color: #fff;
 	text-decoration: none;
+	background-color: rgba(25,50,93,0.3);
+
+	/* Button 1a */
+	&:hover,
+	&:active {
+		cursor: pointer;
+		background: #fff;
+		color: $blue;
+	
+	}
+}
+
+/* Button 1 */
+.training-btn {
+	border: 3px solid #fff;
+	margin: auto;
+	padding: 25px 30px;
+	color: #fff;
+	text-decoration: none;
+	background-color: rgba(25,50,93,0.3);
 
 	/* Button 1a */
 	&:hover,

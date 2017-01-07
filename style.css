@@ -269,38 +269,43 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* line 183, sass/_normalize.scss */
+span.wpcf7-list-item {
+  display: block;
+}
+
+/* line 187, sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 189, sass/_normalize.scss */
+/* line 193, sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 194, sass/_normalize.scss */
+/* line 198, sass/_normalize.scss */
 textarea {
   overflow: auto;
 }
 
-/* line 198, sass/_normalize.scss */
+/* line 202, sass/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
 
-/* line 202, sass/_normalize.scss */
+/* line 206, sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 207, sass/_normalize.scss */
+/* line 211, sass/_normalize.scss */
 td,
 th {
-  padding: 0;
+  padding: 4px 0;
 }
 
 /*--------------------------------------------------------------
@@ -489,9 +494,10 @@ table {
   margin: auto;
   color: #fff;
   text-decoration: none;
+  background-color: rgba(25, 50, 93, 0.3);
   /* Button 1a */
 }
-/* line 112, sass/default/_elements.scss */
+/* line 113, sass/default/_elements.scss */
 .outline-btn:hover, .outline-btn:active {
   cursor: pointer;
   background: #fff;
@@ -499,7 +505,25 @@ table {
 }
 
 /* Button 1 */
-/* line 121, sass/default/_elements.scss */
+/* line 123, sass/default/_elements.scss */
+.training-btn {
+  border: 3px solid #fff;
+  margin: auto;
+  padding: 25px 30px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(25, 50, 93, 0.3);
+  /* Button 1a */
+}
+/* line 132, sass/default/_elements.scss */
+.training-btn:hover, .training-btn:active {
+  cursor: pointer;
+  background: #fff;
+  color: #003263;
+}
+
+/* Button 1 */
+/* line 141, sass/default/_elements.scss */
 .sidebar-btn {
   border: 3px solid #fff;
   color: #fff;
@@ -509,7 +533,7 @@ table {
   padding: 20px;
   /* Button 1a */
 }
-/* line 129, sass/default/_elements.scss */
+/* line 149, sass/default/_elements.scss */
 .sidebar-btn:hover, .sidebar-btn:active {
   cursor: pointer;
   background: #fff;
@@ -619,7 +643,22 @@ input[type="submit"]:focus {
 .content-container {
   max-width: 1080px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 80px;
+}
+@media (min-width: 50em) {
+  /* line 5, sass/default/_structure.scss */
+  .content-container {
+    padding-top: 150px;
+  }
+}
+
+/* line 15, sass/default/_structure.scss */
+div[class*='lead-img-'] {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -643,9 +682,8 @@ textarea {
 /* line 26, sass/default/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-size: 32px;
-  font-size: 2rem;
   font-family: "DKLemon";
+  margin: 0;
 }
 
 /* line 32, sass/default/_typography.scss */
@@ -715,82 +753,157 @@ big {
 }
 /* line 8, sass/layout/_home.scss */
 .hero #hero-background {
-  height: 40vh;
-  margin-top: 100px;
+  height: 60vh;
+  margin-top: 85px;
 }
 @media (min-width: 50em) {
   /* line 8, sass/layout/_home.scss */
   .hero #hero-background {
-    height: 70vh;
+    height: 88vh;
     min-height: 740px;
+    margin-top: 130px;
   }
 }
 
-/* line 19, sass/layout/_home.scss */
+/* line 20, sass/layout/_home.scss */
 .hero-cta {
   height: 80px;
   width: 320px;
 }
 
-/* line 26, sass/layout/_home.scss */
+/* line 25, sass/layout/_home.scss */
+.training-buttons {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  display: none;
+}
+@media (min-width: 50em) {
+  /* line 25, sass/layout/_home.scss */
+  .training-buttons {
+    height: 230px;
+  }
+}
+
+/* line 37, sass/layout/_home.scss */
+.training-question {
+  font-size: 3em;
+  color: #003263;
+  line-height: 1.2;
+  text-shadow: 2px 2px rgba(100, 100, 100, 0.5);
+}
+@media (min-width: 50em) {
+  /* line 37, sass/layout/_home.scss */
+  .training-question {
+    font-size: 4em;
+  }
+}
+
+/* line 46, sass/layout/_home.scss */
+.training-cta {
+  width: 320px;
+  margin: 1em 0;
+}
+@media (min-width: 50em) {
+  /* line 46, sass/layout/_home.scss */
+  .training-cta {
+    margin: 0 1em;
+  }
+}
+
+/* line 55, sass/layout/_home.scss */
 .main-content-home {
   max-width: 1080px;
+  padding: 10px 20px;
   background-color: rgba(97, 116, 143, 0.8);
   margin: 0 auto;
 }
 
-/* line 33, sass/layout/_home.scss */
+/* line 62, sass/layout/_home.scss */
 .top-content,
 .bottom-content {
   clear: both;
   padding: 2em;
 }
 
-/* line 39, sass/layout/_home.scss */
+/* line 68, sass/layout/_home.scss */
 .box {
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: inline-block;
   position: relative;
-  padding: 1em;
+  margin: 1em 0;
+  overflow: hidden;
 }
 @media (min-width: 50em) {
-  /* line 39, sass/layout/_home.scss */
+  /* line 68, sass/layout/_home.scss */
   .box {
     width: 58%;
   }
 }
-
-/* line 51, sass/layout/_home.scss */
-.box-bg {
-  width: 100%;
-  height: 100%;
+/* line 80, sass/layout/_home.scss */
+.box:hover .box-bg {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* line 57, sass/layout/_home.scss */
+/* line 86, sass/layout/_home.scss */
+.box-bg {
+  margin-top: -30px;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 95, sass/layout/_home.scss */
 .calendar {
   float: right;
   width: 100%;
+  height: 650px;
+  overflow: scroll;
 }
 @media (min-width: 50em) {
-  /* line 57, sass/layout/_home.scss */
+  /* line 95, sass/layout/_home.scss */
   .calendar {
     width: 40%;
   }
 }
 
-/* line 1, sass/layout/_staff.scss */
-.staff-selected {
-  width: 100%;
+/* line 105, sass/layout/_home.scss */
+.alumni-table {
+  max-height: 800px;
+  overflow: scroll;
 }
 
-/* line 5, sass/layout/_staff.scss */
+/* line 1, sass/layout/_staff.scss */
+.staff-selected {
+  display: none;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(122, 138, 155, 0.8);
+  border: 2px solid #003263;
+  padding: 10px;
+}
+
+/* line 10, sass/layout/_staff.scss */
+.staff-name-selected {
+  margin: 0;
+}
+
+/* line 14, sass/layout/_staff.scss */
 .staff-image-selected {
   width: 25%;
   float: left;
 }
 
-/* line 9, sass/layout/_staff.scss */
+/* line 18, sass/layout/_staff.scss */
 .staff-content-selected {
   width: 70%;
   float: left;
@@ -798,7 +911,7 @@ big {
   text-align: left;
 }
 
-/* line 16, sass/layout/_staff.scss */
+/* line 25, sass/layout/_staff.scss */
 .staff-member {
   float: left;
   width: 24%;
@@ -807,17 +920,17 @@ big {
   cursor: pointer;
 }
 
-/* line 28, sass/layout/_staff.scss */
+/* line 37, sass/layout/_staff.scss */
 .staff-content {
   cursor: pointer;
 }
-/* line 30, sass/layout/_staff.scss */
+/* line 39, sass/layout/_staff.scss */
 .staff-content .staff-name {
   margin: 0;
   height: 70px;
   text-align: center;
 }
-/* line 35, sass/layout/_staff.scss */
+/* line 44, sass/layout/_staff.scss */
 .staff-content .staff-bio {
   display: none;
 }
@@ -845,7 +958,28 @@ big {
 
 /* line 19, sass/elements/_calendar.scss */
 .instashow-gallery .instashow-gallery-media-cover {
-  background-color: rgba(0, 50, 99, 0.9) !important;
+  background-color: rgba(0, 50, 99, 0.2) !important;
+}
+
+/* line 22, sass/elements/_calendar.scss */
+.simcal-event-details {
+  color: #003263;
+}
+
+/* line 25, sass/elements/_calendar.scss */
+.simcal-day {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+/* line 28, sass/elements/_calendar.scss */
+.simcal-day .simcal-event-details {
+  color: white;
+}
+
+/* line 33, sass/elements/_calendar.scss */
+#secondary .simcal-calendar {
+  height: 300px;
+  overflow: scroll;
 }
 
 /* line 1, sass/elements/_header.scss */
@@ -855,7 +989,7 @@ big {
   top: 0;
   width: 100%;
   z-index: 101;
-  background-color: #003263;
+  background-color: rgba(25, 50, 93, 0.93);
 }
 
 /* line 10, sass/elements/_header.scss */
@@ -866,8 +1000,14 @@ big {
 
 /* line 15, sass/elements/_header.scss */
 .logo {
-  width: 16%;
+  width: 120px;
   float: left;
+}
+@media (min-width: 50em) {
+  /* line 15, sass/elements/_header.scss */
+  .logo {
+    width: 16%;
+  }
 }
 
 /* line 1, sass/elements/_footer.scss */
@@ -893,32 +1033,35 @@ big {
 /* line 8, sass/elements/_sidebar.scss */
 .main-content {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
+  background-color: rgba(97, 116, 143, 0.8);
+  padding: 1em 2em;
 }
 @media (min-width: 50em) {
   /* line 8, sass/elements/_sidebar.scss */
   .main-content {
     float: left;
     width: 73%;
+    min-height: 800px;
   }
 }
 
-/* line 18, sass/elements/_sidebar.scss */
+/* line 19, sass/elements/_sidebar.scss */
 .site-content .widget-area {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(97, 116, 143, 0.8);
+  display: none;
 }
 @media (min-width: 50em) {
-  /* line 18, sass/elements/_sidebar.scss */
+  /* line 19, sass/elements/_sidebar.scss */
   .site-content .widget-area {
+    display: block;
     float: right;
     overflow: hidden;
     width: 25%;
   }
 }
 
-/* line 28, sass/elements/_sidebar.scss */
+/* line 31, sass/elements/_sidebar.scss */
 .site-footer {
   clear: both;
   width: 100%;
@@ -1033,61 +1176,74 @@ a:hover, a:active {
 /* line 82, sass/navigation/_menus.scss */
 .main-nav li:hover > a, .main-nav li.focus > a {
   cursor: pointer;
-  font-style: italic;
+  text-decoration: underline;
 }
-/* line 90, sass/navigation/_menus.scss */
+/* line 89, sass/navigation/_menus.scss */
 .main-nav a {
   display: block;
   text-decoration: none;
   color: white;
 }
+/* line 95, sass/navigation/_menus.scss */
+.main-nav .current_page_item > a,
+.main-nav .current-menu-item > a,
+.main-nav .current_page_ancestor > a,
+.main-nav .current-menu-ancestor > a {
+  text-decoration: underline;
+}
 
 /* Small menu. */
-/* line 104, sass/navigation/_menus.scss */
+/* line 105, sass/navigation/_menus.scss */
 .menu-toggle,
 .main-nav.toggled ul {
   display: block;
 }
 
-/* line 109, sass/navigation/_menus.scss */
+/* line 110, sass/navigation/_menus.scss */
 .menu-toggle {
   position: absolute;
   right: 2em;
-  top: 1em;
+  top: 1.6em;
+  background-color: rgba(97, 116, 143, 0.8);
+  border: 2px solid white;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: .6em;
+  line-height: 1.2;
 }
 
-/* line 115, sass/navigation/_menus.scss */
+/* line 122, sass/navigation/_menus.scss */
 .main-nav.toggled ul {
   margin-top: 50px;
 }
 
 @media (min-width: 50em) {
-  /* line 119, sass/navigation/_menus.scss */
+  /* line 126, sass/navigation/_menus.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 122, sass/navigation/_menus.scss */
+  /* line 129, sass/navigation/_menus.scss */
   .main-nav ul {
     display: block;
   }
 }
-/* line 131, sass/navigation/_menus.scss */
+/* line 138, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 136, sass/navigation/_menus.scss */
+/* line 143, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 141, sass/navigation/_menus.scss */
+/* line 148, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
