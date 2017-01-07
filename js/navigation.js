@@ -7,7 +7,7 @@
 ( function() {
 	var container, button, menu, links, subMenus, i, len;
 
-	container = document.getElementById( 'site-navigation' );
+	container = document.getElementById( 'site-nav' );
 	if ( ! container ) {
 		return;
 	}
@@ -31,6 +31,7 @@
 	}
 
 	button.onclick = function() {
+		console.log('menu')
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );

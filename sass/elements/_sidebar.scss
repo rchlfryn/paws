@@ -1,22 +1,27 @@
-//Right sidebar
-.content-area {
-	width: 100%;
-	@include breakpoint ('tablet'){
-		float: left;
-		margin: 0 (-$size__site-sidebar) 0 0;
-		width: $size__site-main;
-	}
-}
 
 .site-main {
+	// @include breakpoint ('tablet'){
+	// 	margin: 0 $size__site-sidebar 0 0;
+	// }
+}
+//Right sidebar
+.main-content {
+	width: $size__site-main;
+	background-color: rgba(97, 116, 143, 0.8);
+	padding: 1em 2em;
 	@include breakpoint ('tablet'){
-		margin: 0 $size__site-sidebar 0 0;
+		float: left;
+		width: 73%;
+		min-height: 800px;
 	}
 }
 
 .site-content .widget-area {
 	width: 100%;
+	background-color: rgba(97, 116, 143, 0.8);
+	display: none;
 	@include breakpoint ('tablet'){
+		display: block;
 		float: right;
 		overflow: hidden;
 		width: $size__site-sidebar;

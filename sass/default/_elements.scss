@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background-color: $blue; /* Fallback for when there is no custom background color defined. */
+	background-image: url('assets/paws_bg.png');
 }
 
 blockquote, q {
@@ -67,3 +68,92 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+.outline-btn {
+	border: 3px solid #fff;
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+	margin: auto;
+	color: #fff;
+	text-decoration: none;
+	background-color: rgba(25,50,93,0.3);
+
+	/* Button 1a */
+	&:hover,
+	&:active {
+		cursor: pointer;
+		background: #fff;
+		color: $blue;
+	
+	}
+}
+
+/* Button 1 */
+.training-btn {
+	border: 3px solid #fff;
+	margin: auto;
+	padding: 25px 30px;
+	color: #fff;
+	text-decoration: none;
+	background-color: rgba(25,50,93,0.3);
+
+	/* Button 1a */
+	&:hover,
+	&:active {
+		cursor: pointer;
+		background: #fff;
+		color: $blue;
+	
+	}
+}
+/* Button 1 */
+.sidebar-btn {
+	border: 3px solid #fff;
+	color: #fff;
+	width: 90%;
+	margin: 10px auto;
+	display: block;
+	padding: 20px;
+	/* Button 1a */
+	&:hover,
+	&:active {
+		cursor: pointer;
+		background: #fff;
+		color: $blue;
+	
+	}
+}
+
+
+

@@ -1,15 +1,48 @@
 .staff-selected {
+	display: none;
 	width: 100%;
-	text-align: center;
+	overflow: auto;
+	background-color: rgba(122, 138, 155, .8);
+	// background-color: rgba(97, 116, 143, .9);
+	border: 2px solid $blue;
+	padding: 10px;
+}
+.staff-name-selected {
+	margin: 0;
+}
+
+.staff-image-selected {
+	width: 25%;
+	float: left;
+}
+.staff-content-selected {
+	width: 70%;
+	float: left;
+	margin-left: 4%;
+	text-align: left;
 }
 
 .staff-member {
 	float: left;
 	width: 24%;
 	margin-right: 1%;
-	background: grey;
+	min-height: 200px;
+	cursor: pointer;
+}
+
+.staff-image {
+	// width: 500px;
 }
 
 .staff-content {
-	display: none;
+	cursor: pointer;
+	.staff-name{
+		margin: 0;
+		height: 70px;
+		text-align: center;
+	}
+	.staff-bio{
+		display: none;
+	}
+
 }

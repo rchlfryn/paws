@@ -1,10 +1,14 @@
-.main-navigation {
-	// clear: both;
+.main-nav {
 	display: block;
-	float: right;
 	margin: 30px 0;
+	font-family: $font__headline;
+	@include font-size(1.4);
+	clear: both;
 	@include breakpoint ('tablet') {
-		margin: 90px 0;
+		clear: none;
+		margin: 40px 0;
+		float: right;
+
 	}
 
 	ul {
@@ -13,11 +17,13 @@
 		margin: 0;
 		padding-left: 0;
 
+		// Secondary level
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: $blue;
 			float: left;
 			position: absolute;
-			top: 1.5em;
+			top: 2.3em;
 			left: -999em;
 			z-index: 99999;
 
@@ -27,6 +33,11 @@
 			}
 
 			li {
+				// border-right: 0;
+				border-bottom: 1px solid white;
+				&:last-child {
+					border: 0;
+				}
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -43,59 +54,79 @@
 
 			a:hover,
 			a.focus {
+
 			}
 		}
 
+		//Secondary menu on hover
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			left: 0;
 		}
 	}
 
+// Main menu list items
 	li {
 		position: relative;
 		padding: 10px 30px;
-		background: grey;
-		border-right: 1px solid blue;
+		// border-right: 1px solid white;
+		cursor: pointer;
+
+		&:last-child {
+			border-right: 0;
+		}
 		@include breakpoint ('tablet') {
 			float: left;
 		}
 
 		&:hover > a,
 		&.focus > a {
+			cursor: pointer;
+			text-decoration: underline;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		color: white;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		text-decoration: underline;
+
 	}
 }
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
 	display: block;
 }
 
 .menu-toggle {
 	position: absolute;
-	right: 0;
+	right: 2em;
+	top: 1.6em;
+	background-color: rgba(97, 116, 143, .8);
+	border: 2px solid white;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	padding: .6em;
+	line-height: 1.2;
 }
-.main-navigation.toggled ul {
+.main-nav.toggled ul {
 	margin-top: 50px;
 }
 @include breakpoint ('tablet') {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
+	.main-nav ul {
 		display: block;
 	}
 }

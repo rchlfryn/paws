@@ -1,0 +1,36 @@
+.simcal-default-calendar-list {
+	background-color: rgba(0, 50, 99,.9) !important;
+	margin: 10px !important;
+}
+
+.simcal-day-label {
+	& > span{
+		background-color: transparent !important;
+		font-family: $font__headline;
+		font-size: 1.3em;
+	}
+}
+
+.simcal-default-calendar-list ul.simcal-events {
+	// margin: 0 !important;
+	padding-left: 0 !important;
+}
+
+.instashow-gallery .instashow-gallery-media-cover {
+	background-color: rgba(0, 50, 99,.2) !important;
+}
+.simcal-event-details {
+	color: $blue;
+}
+.simcal-day {
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	.simcal-event-details {
+		color: white;
+	}
+}
+
+#secondary .simcal-calendar {
+	height: 300px;
+	overflow: scroll;
+}

@@ -13,24 +13,32 @@
  */
 
 get_header(); ?>
-	<div class="content-container">
-	<div id="primary" class="content-area">
+<?php
+$thumb_id = get_post_thumbnail_id();
+$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+?>
+<div id="training-page" class="content-container">
 		<main id="main" class="site-main" role="main">
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="lead-img-training" style="background-image: url(<?php echo $thumb_url[0]; ?>); ">
+		</div>
 
-		<h1 class="page-title screen-reader-text"><?php the_title(); ?></h1>  
-		
-		        <div class="entry">
-		            <?php the_content(); ?>
-		        </div><!-- entry -->
-		<?php endwhile; ?>
-		<?php endif; ?>
+			<div class="main-content">
+
+				<?php
+					if ( have_posts() ) :
+						the_title( '<h1 class="entry-title">', '</h1>' );
+					/* Start the Loop */
+						while ( have_posts() ) : the_post();
+							the_content();
+						endwhile;
+					endif; ?>
+			</div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<?php
-get_sidebar();?>
-</div>
-<?php
-get_footer();
+	<!-- Sidebar -->
+	<?php get_sidebar(); ?>
+	
+</div> <!-- .content-container -->
+
+<?php get_footer();

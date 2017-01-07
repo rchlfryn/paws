@@ -1,8 +1,21 @@
-.site-header {
+.header {
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 101;
+	background-color: rgba(25,50,93,0.93);
+}
+
+.header-container {
 	max-width: $max-container;
 	margin: 0 auto;
 }
+
 .logo {
-	width: 20%;
+	width: 120px;
 	float: left;
+	@include breakpoint ('tablet'){
+		width: 16%;
+	}
 }

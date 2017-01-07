@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package blank
+ * @package paws
  */
 
 ?><!DOCTYPE html>
@@ -21,21 +21,24 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header id="masthead" class="site-header" role="banner">
-		<div class="logo">
-			<?php 
-				$custom_logo_id = get_theme_mod( 'custom_logo' );
-				$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );?>
-				<img src="<?php echo $image[0]?>">
-		</div>
+	<header class="header" role="banner">
+		<div class="header-container">
+			<div class="logo">
+				<?php 
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				?>
+					<img src="<?php echo $image[0]?>">
+			</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<span class="dashicons dashicons-menu"></span>
-				<?php esc_html_e( 'Menu', 'blank' ); ?>
-				</button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<nav id="site-nav" class="main-nav" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="dashicons dashicons-menu"></span>
+					<?php esc_html_e( 'Menu', 'blank' ); ?>
+					</button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .header-container -->
+	</header><!-- .header -->
 
 	<div id="content" class="site-content">
